@@ -9,6 +9,6 @@ const displayRecipes = function () {
 }
 
 $('#recipes-container').on('click', '.image', function () {
-    const title = $(this).closest('div').find('li').text()
-    alert(title)
+    const fIngredient = $(this).closest('div').find('ul').find('li').first().text()
+    alert(fIngredient)
 })

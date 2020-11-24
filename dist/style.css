@@ -1,3 +1,12 @@
+body{
+    background-image: url("nice.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
 #container{
     display: grid;
 }
@@ -19,8 +28,12 @@
     display: grid;
     background-color: orange;
     justify-self: center;
+    border-radius: 7%;
     padding: 10px;
     width: 300px;
+}
+.Ingredient{
+    justify-self: left;
 }
 
 .image{
@@ -31,6 +44,7 @@
 }
 
 P{
+    display: inline-block;
     font-weight: bold;
     justify-self: center;
 }
