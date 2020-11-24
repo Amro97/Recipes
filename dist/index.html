@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Recipes</title>
+</head>
+
+<body>
+    <div id='container'>
+        <div id='inputBlock'>
+            <input id='input' type='text' placeholder="Ingredient Name">
+            <button id='btn' onclick="displayRecipes()">Get Recipes</button>
+        </div>
+        <div id='recipes-container'></div>
+    </div>
+
+    <script id="recipes-template" type="text/x-handlebars-template">
+        {{#each recipes}}
+            <div class = 'recipes'>
+                <p><a href='{{href}}'>{{title}}</a></p>
+                <img class='image' src = '{{thumbnail}}'>
+                <p>Ingredients:</p>
+                <ul>
+                {{#each ingredients}}
+                <li>{{this}}</li>
+                {{/each}}
+                </ul>
+            </div>
+        {{/each}}
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="recipesManager.js"></script>
+    <script src="renderer.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
